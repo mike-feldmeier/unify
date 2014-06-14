@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>unify test page</title>
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300"/>
+		<link rel="stylesheet" href="test.css"/>
+	</head>
+	<body>
+		<h1>Unify Test Page</h1>
+		<div id="testarea">
+			<div id="testbox"></div>
+		</div>
+		<div id="log">
+			<div class="header">
+				<div class="title">e.source</div>
+				<div class="title">e.type</div>
+				<div class="title">e.current.[x, y]</div>
+				<div class="title">e.origin.[x, y]</div>
+				<div class="title">e.travel.[x, y]</div>
+			</div>
+			<div class="logs"></div>
+		</div>
+		<div id="footer">
+			<a id="clear-button" class="button" href="#">Clear Log</a>
+		</div>
+		<div id="templates">
+			<div class="entry">
+				<div class="source"></div>
+				<div class="type"></div>
+				<div class="current"></div>
+				<div class="origin"></div>
+				<div class="travel"></div>
+			</div>
+		</div>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="../unify.js"></script>
+		<script src="test.js"></script>
+	</body>
+</html>

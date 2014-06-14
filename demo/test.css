@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  background-color: #27ae60;
+  color: #fff;
+  font-family: Roboto;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body h1 {
+  font-size: 2rem;
+  flex: 0;
+}
+body #testarea {
+  flex: 1 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #testarea #testbox {
+  background-color: #2ecc71;
+  box-shadow: 0 0 2px 2px #25a55b;
+  width: 10rem;
+  height: 10rem;
+}
+body #log {
+  background-color: #25a55b;
+  flex: 1 0 40%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body #log .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+}
+body #log .header .title {
+  font-weight: bold;
+  flex: 1;
+}
+body #log .logs {
+  flex: 1;
+  overflow-y: auto;
+}
+body #log .logs .entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1px;
+}
+body #log .logs .entry .source,
+body #log .logs .entry .type,
+body #log .logs .entry .current,
+body #log .logs .entry .origin,
+body #log .logs .entry .travel {
+  flex: 1;
+}
+body #footer {
+  padding-top: 1rem;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a.button {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border: 1px solid #2ecc71;
+  color: #fff;
+  margin-right: 1rem;
+}
+a.button:active {
+  background-color: #2ecc71;
+}
+a.active {
+  background-color: #2ecc71;
+}
+#templates {
+  display: none;
+}
