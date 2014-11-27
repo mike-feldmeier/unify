@@ -28,6 +28,7 @@ function log(e) {
 	$(".current", entry).html(e.current.x + ", " + e.current.y);
 	$(".origin", entry).html(e.origin.x + ", " + e.origin.y);
 	$(".travel", entry).html(e.travel.x + ", " + e.travel.y);
+	$(".delta", entry).html(e.delta.x + ", " + e.delta.y);
 
 	logNode.append(entry);
 

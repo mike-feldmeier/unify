@@ -63,7 +63,8 @@ body #log .logs .entry .source,
 body #log .logs .entry .type,
 body #log .logs .entry .current,
 body #log .logs .entry .origin,
-body #log .logs .entry .travel {
+body #log .logs .entry .travel,
+body #log .logs .entry .delta {
   flex: 1;
 }
 body #footer {
