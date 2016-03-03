@@ -11,6 +11,11 @@ Just include unify.js after jQuery
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="/js/unify.js"></script>
 
+Online Demo
+-----------
+
+For an online demo, please see the fiddle [here](https://jsfiddle.net/mikefeldmeier/d0vc621k).  The demo source files are included under the demo folder.
+
 Usage
 -----
 
