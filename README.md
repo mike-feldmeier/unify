@@ -32,7 +32,7 @@ The event object looks like this:
 
     {
       source: "mouse | touch",
-      type: "begin | move | drag | end",
+      type: "begin | move | drag | end | tap",
       current: { x: 0, y: 0 },
       origin: { x: 0, y: 0 },
       travel: { x: 0, y: 0 },
@@ -51,6 +51,7 @@ The type property will be one of the following types:
 - move: a mousemove has occurred (there is no corresponding touch event)
 - drag: a move has been performed through a touch, or through a mouse with the mousedown active
 - end: a mouseup or touchend has occurred
+- tap: a mouseup or touchend has occurred without moving from the place of mousedown or touchstart
 
 ### current
 
@@ -67,19 +68,3 @@ The travel property contains x and y subproperties.  This is the difference betw
 ### delta
 
 The delta property contains x and y subproperties.  This is the difference between the last and current properties, indicating how much the cursor has moved since the last move of the drag activity.  These will both be 0 for begin and move activities.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

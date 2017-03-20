@@ -53,8 +53,17 @@
 			template.travel = { x: current.x - origin.x, y: current.y - origin.y };
 			template.delta = { x: current.x - last.x, y: current.y - last.y };
 		}
-		
+
 		handler(template);
+
+		if(origin) {
+			if(_equal(origin, current) && _equal(template.delta, { x: 0, y: 0 })) {
+				template.type = "tap";
+			}
+			
+			handler(template);
+		}
+
 		origin = last = null;
 	}
 
@@ -90,7 +99,15 @@
 		var current = { x: lastTouch.x, y: lastTouch.y };
 		var travel = { x: current.x - origin.x, y: current.y - origin.y };
 		var delta = { x: current.x - last.x, y: current.y - last.y };
-		handler(_template({ source: "touch", type: "end", current: current, origin: origin, travel: travel, delta: delta }));
+
+		var template = _template({ source: "touch", type: "end", current: current, origin: origin, travel: travel, delta: delta });
+		handler(template);
+
+		if(_equal(origin, current) && _equal(template.delta, { x: 0, y: 0 })) {
+			template.type = "tap";
+			handler(template);
+		}
+
 		origin = lastTouch = last = null;
 	}
 
@@ -120,6 +137,10 @@
 				y: 0
 			}
 		}, values);
+	}
+
+	function _equal(a, b) {
+		return a.x === b.x && a.y === b.y;
 	}
 
 })(jQuery);
